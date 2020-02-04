@@ -1,0 +1,286 @@
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rajdhani Regular'), local('Rajdhani-Regular'), url(https://fonts.gstatic.com/s/rajdhani/v7/LDIxapCSOBg7S-QT7p4HM-Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root{
+	--az-lf: 20px;
+	--az-tp: 20px;
+
+	--am-lf: 140px;
+	--am-tp: 140px;
+
+	--pt-lf: 260px;
+	--pt-tp: 20px;
+
+	--vm-lf: 500px;
+	--vm-tp: 20px;
+
+	--vd-lf: 380px;
+	--vd-tp: 140px;	
+}
+
+
+
+*{
+	margin: 0px;
+	top: 0px;
+	padding: 0px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background: url('img/tk.jpg') no-repeat;
+	background-size: 100%;
+
+}
+
+
+
+/* ----------- Titulo ----------- */
+
+#text{
+	/*position: fixed;*/
+
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 480px;
+	visibility: visible;
+	transition: visibility 0s ease-in-out 750ms;
+}
+#text h1{
+	font-family: 'Rajdhani', Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 61pt;
+	font-weight: 500;
+	/*color*/
+	text-align: center;
+	cursor: default;
+}
+
+
+
+/* ----------- Container ----------- */
+
+#container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 46.25em;
+	height: 23.625em;
+	background-color: transparent;
+}
+
+
+
+
+
+
+
+/* ----------- Circulos class ----------- */
+
+.cir{
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	border: 20px solid;
+	border-radius: 100%;
+	background-color: transparent;	
+}
+
+
+
+
+
+
+#az{
+	border-color: blue;
+	left: var(--az-lf);
+	top: var(--az-tp);
+}
+
+#az::before{
+	content: '';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	left: 50%;
+	top: -20px;
+	border:20px solid blue;
+	border-top-right-radius:100%;
+	border-bottom: none;
+	border-left: none;
+	background-color: transparent;
+	clip: rect(55px, 110px, 110px, 70px);
+	z-index: 1;
+}
+
+#az::after{
+	content: '';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	left: 50%;
+	top: 50%;
+	border:20px solid blue;
+	border-bottom-right-radius:100%;
+	border-top: none;
+	border-left: none;
+	background-color: transparent;
+	clip: rect(0px, 110px, 40px, 80px);
+	z-index: 1;
+}
+
+
+#az:hover{
+	background: url(img/europe.png) no-repeat ; 
+	background-size: 150px;
+	background-position: 30% 15%;
+	cursor: pointer;
+}
+
+
+
+
+
+#am{
+	border-color: yellow;
+	left: var(--am-lf);
+	top: var(--am-lf);
+}
+#am::before{
+	content: '';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	left: 50%;
+	top: -20px;
+	border:20px solid yellow;
+	border-left: none;
+	border-bottom: none;
+	border-top-right-radius:100%;
+	background-color: transparent;
+	clip: rect(0px, 39px, 30px, 10px);
+	z-index: 1;
+}
+#am:hover{
+	background: url(img/asia.png) no-repeat; 
+	background-size: 150px;
+	background-position: 50% 100%;
+	cursor: pointer;
+}
+
+
+
+
+
+#pt{
+	border-color: black;
+	left: var(--pt-lf);
+	top: var(--pt-tp);
+}
+#pt::before{
+	content: '';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	left: 50%;
+	top: -20px;
+	border:20px solid black;
+	border-top-right-radius:100%;
+	border-bottom: none;
+	border-left: none;
+	background-color: transparent;
+	clip: rect(55px, 110px, 110px, 70px);
+	z-index: 1;
+}
+#pt::after{
+	content: '';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	left: 50%;
+	top: 50%;
+	border:20px solid black;
+	border-bottom-right-radius:100%;
+	border-top: none;
+	border-left: none;
+	background-color: transparent;
+	clip: rect(0px, 110px, 40px, 81px);
+	z-index: 1;
+}
+#pt:hover{
+	background: url(img/africa.png) no-repeat; 
+	background-size: 150px;
+	background-position: 40% 35%;
+	cursor: pointer;
+}
+
+
+
+
+
+#vm{
+	border-color: red;
+	left: var(--vm-lf);
+	top: var(--vm-tp);
+}
+#vm::before{
+	content: '';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	left: -20px;
+	top: 50%;
+	border:20px solid red;
+	border-bottom-left-radius:100%;
+	border-top: none;
+	border-right: none;
+	background-color: transparent;
+	clip: rect(79px, 100px, 110px, 70px);
+	z-index: 1;
+}
+#vm:hover{
+	background: url(img/america.png) no-repeat; 
+	background-size: 160px;
+	background-position: 40% 65%;
+	cursor: pointer;
+}
+
+
+
+
+
+#vd{
+	border-color: green;
+	left: var(--vd-lf);
+	top: var(--vd-tp);
+	right: 20px;
+}
+#vd::before{
+	content: '';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	left: -20px;
+	top: -20px;
+	border:20px solid green;
+	border-right: none;
+	border-bottom: none;
+	border-top-left-radius:100%;
+	background-color: transparent;
+	clip: rect(94px, 22px, 110px, 0px);
+	z-index: 1;
+}
+#vd:hover{
+	background: url(img/australia.png) no-repeat; 
+	background-size: 130px;
+	background-position: 60% 75%;
+	cursor: pointer;
+}
